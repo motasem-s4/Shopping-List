@@ -19,6 +19,10 @@ struct ItemRow: View {
             VStack(alignment: .leading) {
                 Text(item.name)
                     .strikethrough(item.isCompleted)
+                
+                Text(item.categoryRaw)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
             Spacer()
         }
