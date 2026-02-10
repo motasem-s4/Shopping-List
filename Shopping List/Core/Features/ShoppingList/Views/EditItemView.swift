@@ -40,7 +40,7 @@ struct EditItemView: View {
                     TextField("Name", text: $editedName)
                     Picker("Category", selection: $editedCategory) {
                         ForEach(ItemCategory.allCases) { category in
-                            Text(category.rawValue)
+                            Text(category.id).tag(category)
                         }
                     }
                 }

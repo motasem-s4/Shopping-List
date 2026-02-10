@@ -187,7 +187,7 @@ struct ShoppingListView: View {
             Picker("", selection: $vm.filter) {
                 Text("All").tag(CategoryFilter.all)
                 ForEach(ItemCategory.allCases) { category in
-                    Text(category.rawValue)
+                    Text(category.id).tag(CategoryFilter.category(category))
                 }
             }
         } label: {
