@@ -13,6 +13,7 @@ struct Shopping_ListApp: App {
     var body: some Scene {
         WindowGroup {
             ShoppingListView()
+                .preferredColorScheme(.light) 
         }
         .modelContainer(for: ShoppingItem.self)
     }

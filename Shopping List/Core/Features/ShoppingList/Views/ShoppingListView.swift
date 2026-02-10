@@ -130,6 +130,7 @@ struct ShoppingListView: View {
                 
                 Button {
                     vm.addItem()
+                    dismissKeyboard()
                 } label: {
                     HStack{
                         Image(systemName: "plus")
