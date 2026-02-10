@@ -75,12 +75,6 @@ class ShoppingListViewModel: ObservableObject {
     }
 
     // MARK: - Filter + Group
-    var filterIcon: String {
-        filter == .all ?
-              "line.3.horizontal.decrease.circle" :
-                "line.3.horizontal.decrease.circle.fill"
-    }
-    
     var filteredItems: [ShoppingItem] {
         switch filter {
         case .all:

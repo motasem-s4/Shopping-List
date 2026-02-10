@@ -182,6 +182,12 @@ struct ShoppingListView: View {
     }
     
     // MARK: - Filter View
+    private var filterIcon: String {
+        vm.filter == .all ?
+              "line.3.horizontal.decrease.circle" :
+                "line.3.horizontal.decrease.circle.fill"
+    }
+    
     private var filterView: some View {
         Menu {
             Picker("", selection: $vm.filter) {
@@ -191,7 +197,7 @@ struct ShoppingListView: View {
                 }
             }
         } label: {
-            Label("Filter", systemImage: vm.filterIcon)
+            Label("Filter", systemImage: filterIcon)
                 .padding()
         }
     }
